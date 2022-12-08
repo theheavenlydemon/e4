@@ -1,0 +1,31 @@
+<html>
+<body>
+<p id='answer'></p>
+</body>
+<head>
+<script>
+function displayOdd()
+{
+const number= prompt("Enter a number:"); for(let i=0;i<=number;i++)
+{ if(i%2!=0)
+{
+document.getElementById('answer').innerHTML+="<br>"+i;
+}
+}
+}
+displayOdd();
+</script>
+</head>
+<style>
+    html{
+background:linear-gradient(to right,rgb(195, 255, 0) 0%,tomato 50%,orange 100%);
+}
+p{
+font-family:Verdana; font-size:20px;
+}
+input,button{ margin-top:10px; padding:5px;
+font-family:Verdana; font-size:20px;
+}
+</style>
+
+</html>

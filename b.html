@@ -1,0 +1,39 @@
+<html>
+<head>
+    <style> html{
+        background:linear-gradient(to right,rgb(228, 236, 232) 0%,mediumseagreen 5%);
+        }
+        p{
+        font-family:Verdana; font-size:20px;
+        }
+        input,button{ margin-top:10px; padding:5px;
+         font-size:20px;
+        }
+        </style>
+        
+<script>
+function Palindrome()
+{
+var remainder, temp, value = 0;
+var number = Number(document.getElementById("number").value); temp = number;
+while(number>0)
+{
+remainder = number%10; number = parseInt(number/10); value = value*10+remainder;
+}
+if(value==temp)
+{
+document.getElementById('answer').innerHTML=temp+" is Palindrome";
+}
+else
+{
+document.getElementById('answer').innerHTML=temp+" is not Palindrome";
+}
+}
+</script>
+</head>
+<body>
+<input type="text" id = "number" placeholder='Enter the Number'/><br>
+<button onClick="Palindrome()">Check</button><br><br>
+<p id='answer'></p>
+</body>
+</html>
